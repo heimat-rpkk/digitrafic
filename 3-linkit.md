@@ -266,4 +266,6 @@ Selitys
 
 - Muuta linkkiä siten, että se näyttää kaikki aseman kelikamerat. Kelikameran kuvan saa haettua id:n avulla (https://weathercam.digitraffic.fi/C1451601.jpg?thumbnail=true). Käytä thumpnail-kuvia.
 
+- Lisää kuville otsikko, joka kertoo aseman nimen.
+
 - Lisää pieneen kuvaan linkki, joka avaa kuvan suurempana (uudelle sivulle).

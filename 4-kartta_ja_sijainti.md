@@ -1,10 +1,10 @@
-# Oppitunti: Kartta ja sijainti (Leaflet)
+# Kartta ja sijainti (Leaflet)
 
 ## 1. Ulkoisen kirjaston lisääminen (CDN)
 
 CDN eli _Content Delivery Network_ on tapa tuoda valmiita kirjastoja projektiin ilman paikallista asennusta.
 
-Leaflet on suosittu avoimen lähdekoodin JavaScript-kirjasto, jolla voi näyttää karttoja helposti.
+_Leaflet_ on suosittu avoimen lähdekoodin JavaScript-kirjasto, jolla voi näyttää karttoja helposti.
 
 Lisätään HTML-tiedoston `<head>`-osaan seuraavat rivit:
 
@@ -67,7 +67,7 @@ Kun käyttäjä valitsee uuden sijainnin, päivitetään sama kartta:
 
 ## Esimerkki: Kaupungit kartalla
 
-```js
+```html
 <!DOCTYPE html>
 <html lang="fi">
   <head>
@@ -167,3 +167,11 @@ Kun käyttäjä valitsee uuden sijainnin, päivitetään sama kartta:
   </body>
 </html>
 ```
+
+## Tehtävät
+
+- Lisää Leaflet-kartta (ja siihen liittyvä css) kelikamerat-sovellukseesi
+
+- Lisää `naytaSijainti(paikka)`-funktio. Sitä kutsuttaessa argumentteina välitetään aseman nimi ja sijaintikoordinaatit. Nimen ja koordinaatit saa fetch-kutsulla.
+
+- Voit myös muokata funktion parametreja. Kartan keskittämiseen tarvitaan vain leveysaste (latitude) ja pituusaste(longitude).

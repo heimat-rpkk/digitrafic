@@ -27,7 +27,7 @@ selektori {
 -------------------------------------------------------------------------------
 | element	  | HTML-elementtiin    |	p {}	  | kaikki <p>                  |
 | .luokka	  | class-attribuuttiin	| .nimi {}	  | kaikki, joilla class="nimi" |
-| #id	      | id-attribuuttiin | #otsikko {}	| yhteen elementtiin          |
+| #id	      | id-attribuuttiin    | #otsikko {}	| yhteen elementtiin          |
 -------------------------------------------------------------------------------
 ```
 
@@ -107,7 +107,7 @@ const suodatetut = hedelmat.filter((h) => h.startsWith("a"));
 console.log(suodatetut); // ["appelsiini"]
 ```
 
-- `filter()` ei muuta alkuperäistä listaa, vaan luo kopion, jossa on vain halutut arvot.
+- `filter()` ei muuta alkuperäistä taulukkoa, vaan luo kopion, jossa on vain halutut arvot.
 
 ---
 

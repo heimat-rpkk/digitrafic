@@ -260,6 +260,10 @@ Selitys
 
 - Tee kelikameralistaan jokaiselle linkki, joka avaa uuden sivun (target="\_blank")
 
-- Uusi sivu näyttää tarkemmat tiedot id:n perusteella ().
+- Uusi sivu näyttää tarkemmat tiedot id:n perusteella (api/weathercam/v1/stations/C04507).
 
 - Tutki mistä (uudella sivulla olevasta datasta) löytyy kameran id (oikeastaan lista, jossa kaikkien kameroiden idt).
+
+- Muuta linkkiä siten, että se näyttää kaikki aseman kelikamerat. Kelikameran kuvan saa haettua id:n avulla (https://weathercam.digitraffic.fi/C1451601.jpg?thumbnail=true). Käytä thumpnail-kuvia.
+
+- Lisää pieneen kuvaan linkki, joka avaa kuvan suurempana (uudelle sivulle).

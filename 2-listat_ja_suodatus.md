@@ -1,8 +1,6 @@
-# HTML & CSS peruspohja
+# Listat ja suodatus
 
-## Teoria
-
-### HTML-rakenne
+## HTML-rakenne
 
 - HTML:llä rakennetaan sivun rakenne: otsikot, listat, napit, inputit ja divit.
 - Tärkeää:
@@ -11,7 +9,7 @@
   - Listat: `<ul>` (unordered list) ja `<ol>` (ordered list).
   - Syöttökenttä: `<input type="text">`.
 
-### CSS-perusteet
+## CSS-perusteet
 
 - CSS määrittää ulkoasun: värit, fontit, marginaalit, leveydet.
 - CSS:n perusrakenne eli “malli” on täsmälleen tämä:
@@ -25,11 +23,11 @@ selektori {
 - Selektori määrittää mihin tyylimäärittely kohdistuu
 
 ```
-| Selektori | Käyttö              | Esimerkki   | Kohdistuu                   |
+| Selektori   | Käyttö              | Esimerkki   | Kohdistuu                   |
 -------------------------------------------------------------------------------
-| element	  | HTML-elementtiin    |	p {}	      | kaikki <p>                  |
+| element	  | HTML-elementtiin    |	p {}	  | kaikki <p>                  |
 | .luokka	  | class-attribuuttiin	| .nimi {}	  | kaikki, joilla class="nimi" |
-| #id	      | id-attribuuttiin	  | #otsikko {}	| yhteen elementtiin          |
+| #id	      | id-attribuuttiin | #otsikko {}	| yhteen elementtiin          |
 -------------------------------------------------------------------------------
 ```
 
@@ -38,6 +36,78 @@ selektori {
   - `display: flex;` asettaa elementit vierekkäin.
   - `padding: 10px;` ja `margin: 20px;` antavat tilaa elementtien ympärille.
   - `width: 100%` venyttää elementin käytettävissä olevaan tilaan.
+
+## addEventListener — tapahtumakuuntelija
+
+`addEventListener()` liittää HTML-elementtiin **kuuntelijan**, joka reagoi, kun käyttäjä tekee jotain (esim. klikkaa, kirjoittaa, vie hiiren päälle).
+
+**Muoto**
+
+```js
+elementti.addEventListener("tapahtuma", funktio);
+```
+
+- tapahtuma: esim. "click", "input", "change", "keydown".
+
+- funktio: mitä tapahtuu, kun tapahtuma aktivoituu.
+
+**Esimerkki**
+
+```js
+const nappi = document.getElementById("nappi");
+
+nappi.addEventListener("click", () => {
+  console.log("Nappia klikattiin!");
+});
+```
+
+- Tämä koodi tulostaa aina, kun käyttäjä klikkaa nappia.
+
+## forEach — taulukonn läpikäynti
+
+`forEach()` on taulukkometodi, joka suorittaa annetun funktion jokaiselle taulukon alkiolle.
+
+**Muoto**
+
+```js
+taulukko.forEach((alkio) => {
+  // tee jotain jokaiselle alkiolle
+});
+```
+
+**Esimerkki**
+
+```js
+const hedelmat = ["omena", "banaani", "kiivi"];
+
+hedelmat.forEach((hedelma) => {
+  console.log("Hedelmä:", hedelma);
+});
+```
+
+- Tämä tulostaa kaikki taulukon arvot yksi kerrallaan.
+
+## filter — taulukon suodatus
+
+`filter()` palauttaa uuden taulukon, joka sisältää vain ne alkiot, jotka täyttävät annetun ehdon.
+
+**Muoto**
+
+```js
+const uusiTaulukkko = taulukko.filter((alkio) => ehto);
+```
+
+- Jos ehto palauttaa true, alkio jää uuteen taulukkoon. Jos false, ei.
+
+**Esimerkki**
+
+```js
+const hedelmat = ["omena", "banaani", "kiivi", "appelsiini"];
+const suodatetut = hedelmat.filter((h) => h.startsWith("a"));
+console.log(suodatetut); // ["appelsiini"]
+```
+
+- `filter()` ei muuta alkuperäistä listaa, vaan luo kopion, jossa on vain halutut arvot.
 
 ---
 
@@ -70,6 +140,8 @@ selektori {
 ```
 
 Selitys:
+
+- forEach käy läpi kaikki taulukon alkiot
 
 - document.createElement("li") luo uuden listaelementin.
 
@@ -125,7 +197,7 @@ Selitys:
 
 - addEventListener("input", ...) reagoi aina, kun käyttäjä kirjoittaa.
 
-- filter() luo uuden listan niistä alkioista, jotka sisältävät haun tekstin.
+- filter() luo uuden taulukon niistä alkioista, jotka sisältävät haun tekstin.
 
 - Funktio naytaLista päivittää HTML-listan aina haun mukaan.
 

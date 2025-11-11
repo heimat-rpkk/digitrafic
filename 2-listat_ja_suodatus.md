@@ -14,19 +14,29 @@
 ### CSS-perusteet
 
 - CSS määrittää ulkoasun: värit, fontit, marginaalit, leveydet.
+- CSS:n perusrakenne eli “malli” on täsmälleen tämä:
+
+```css
+selektori {
+  tyylimäärittely: arvo;
+}
+```
+
 - Selektori määrittää mihin tyylimäärittely kohdistuu
 
-## | Selektori | Käyttö | Esimerkki | Kohdistuu |
+```
+| Selektori | Käyttö              | Esimerkki   | Kohdistuu                   |
+-------------------------------------------------------------------------------
+| element	  | HTML-elementtiin    |	p {}	      | kaikki <p>                  |
+| .luokka	  | class-attribuuttiin	| .nimi {}	  | kaikki, joilla class="nimi" |
+| #id	      | id-attribuuttiin	  | #otsikko {}	| yhteen elementtiin          |
+-------------------------------------------------------------------------------
+```
 
-| element | HTML-elementtiin | p {} | kaikki <p> |
-| .luokka | class-attribuuttiin | .nimi {} | kaikki, joilla class="nimi" |
-| #id | id-attribuuttiin | #otsikko {} | yhteen elementtiin |
-
----
-
+- Jos sama elementti osuu useaan sääntöön, tarkempi selektori voittaa (#id > .luokka > elementti).
 - Esimerkikkejä tyylimäärittelyistä:
-  - `display: flex` asettaa elementit vierekkäin.
-  - `padding` ja `margin` antavat tilaa elementtien ympärille.
+  - `display: flex;` asettaa elementit vierekkäin.
+  - `padding: 10px;` ja `margin: 20px;` antavat tilaa elementtien ympärille.
   - `width: 100%` venyttää elementin käytettävissä olevaan tilaan.
 
 ---

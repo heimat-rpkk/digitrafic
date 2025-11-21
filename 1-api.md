@@ -85,13 +85,13 @@ Selitys:
 
 ## Tehtävät
 
-- Avaa selaimen konsoli (F12 → Console).
-
 - Kopioi ja suorita esimerkkikoodit.
+
+- Avaa selaimen konsoli (F12 → Console).
 
 - Tarkista, mitä dataa saat näkyviin.
 
-- Kokeile hakea vain ensimmäisen aseman nimi seuraavasti:
+- Kokeile hakea vain ensimmäisen aseman nimi:
 
 .then-rakenteella:
 
